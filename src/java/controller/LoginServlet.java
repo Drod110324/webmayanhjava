@@ -98,12 +98,7 @@ public class LoginServlet extends HttpServlet {
             } else {
                 request.getSession().removeAttribute("login_error");
                 request.getSession().setAttribute("user", user);
-                
-                if (user.getRole() != null && user.getRole().equals("admin")) {
-                    response.sendRedirect("admin");
-                } else {
-                    response.sendRedirect("home");
-                }
+                response.sendRedirect("home");
             }
         } catch (Exception e) {
             request.getSession().setAttribute("login_error", "An error occurred. Please try again.");

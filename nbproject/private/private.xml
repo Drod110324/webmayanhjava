@@ -22,9 +22,6 @@
             <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/jumbotron.jsp</file>
             <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/productProfile.jsp</file>
             <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/ProductProfileServlet.java</file>
-            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/z.jsp</file>
-            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/admin.jsp</file>
-            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/AdminServlet.java</file>
             <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/body.jsp</file>
             <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/productpro.jsp</file>
             <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/cart.jsp</file>
@@ -43,6 +40,14 @@
             <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/UserProfileServlet.java</file>
             <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/_profile.jsp</file>
             <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/_login.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/data/dao/CategoryDao.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/data/dao/Database.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/data/impl/CategoryImpl.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/user.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/register.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/logout.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/model/Product.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/category.jsp</file>
         </group>
     </open-files>
 </project-private>
