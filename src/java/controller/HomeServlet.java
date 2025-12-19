@@ -63,8 +63,6 @@ public class HomeServlet extends HttpServlet {
             throws ServletException, IOException {
        String id_productParam = request.getParameter("id_product");
         if(id_productParam != null && !id_productParam.trim().isEmpty()) {
-//            addProductToCart(request);
-            // Redirect to avoid resubmission
             String id_categoryParam = request.getParameter("id_category");
             if(id_categoryParam != null && !id_categoryParam.trim().isEmpty()) {
                 response.sendRedirect("home?id_category=" + id_categoryParam);
@@ -85,9 +83,6 @@ public class HomeServlet extends HttpServlet {
                 List<Product> listProduct = Database.getProductDao().findByCategory(id_category);
                 request.setAttribute("listProduct", listProduct);
                 request.setAttribute("id_category", id_category);
-//                addProductToCart(request);
-                
-                // Find category name
                 Category selectedCategory = null;
                 for(Category cat : listCategory) {
                     if(cat.getId() == id_category) {
@@ -97,12 +92,10 @@ public class HomeServlet extends HttpServlet {
                 }
                 request.setAttribute("selectedCategory", selectedCategory);
             } catch (NumberFormatException e) {
-                // Invalid category ID, show all products
                 List<Product> listProduct = Database.getProductDao().findALL();
                 request.setAttribute("listProduct", listProduct);
             }
         } else {
-            // No category selected, show all products
             List<Product> listProduct = Database.getProductDao().findALL();
             request.setAttribute("listProduct", listProduct);
         }

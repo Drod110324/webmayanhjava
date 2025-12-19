@@ -27,7 +27,6 @@ public class ProductServlet extends HttpServlet {
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
         request.setAttribute("title", "Quản lý Sản Phẩm");
-        
         String action = request.getParameter("action");
         String idStr = request.getParameter("id");
         String keyword = request.getParameter("keyword"); 
@@ -56,15 +55,9 @@ public class ProductServlet extends HttpServlet {
     @Override
     protected void doPost(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        request.setCharacterEncoding("UTF-8"); // Đảm bảo tiếng Việt không bị lỗi font
-        
-        // Lấy dữ liệu từ form
+        request.setCharacterEncoding("UTF-8");
         String name = request.getParameter("name");
         String image = request.getParameter("image");
-        
-        // Đã xóa origin và option vì Database không có
-
-        // Kiểm tra và parse các giá trị số
         double price = 0;
         int quantity = 0;
         int idCategory = 0;
@@ -80,7 +73,6 @@ public class ProductServlet extends HttpServlet {
                 quantity = Integer.parseInt(quantityStr.trim());
             }
 
-            // SỬA: Lấy đúng tên tham số "id_category" từ form JSP
             String idCategoryStr = request.getParameter("id_category");
             if (idCategoryStr != null && !idCategoryStr.trim().isEmpty()) {
                 idCategory = Integer.parseInt(idCategoryStr.trim());
@@ -89,11 +81,8 @@ public class ProductServlet extends HttpServlet {
         } catch (NumberFormatException e) {
             e.printStackTrace();
         }
-        
-        // SỬA: Gọi hàm add mới (bỏ origin, option)
         Database.getProductDao().add(name, price, quantity, image, idCategory);
         
-        // Redirect về trang danh sách
         response.sendRedirect(request.getContextPath() + "/product");
     }
 

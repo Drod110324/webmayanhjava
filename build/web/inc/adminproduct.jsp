@@ -136,8 +136,7 @@
 
 <script>
     function openEditModal(id, name, price, quantity, image, idCategory) {
-        // Javascript tìm thẻ theo ID và gán giá trị
-        document.getElementById('update-id').value = id; // Quan trọng nhất
+        document.getElementById('update-id').value = id;
         document.getElementById('update-name').value = name;
         document.getElementById('update-price').value = price;
         document.getElementById('update-quantity').value = quantity;

@@ -1,7 +1,6 @@
 <%@page contentType="text/html" pageEncoding="UTF-8"%>
 
 <style>
-    /* Nút mở chat */
     .chat-btn {
         position: fixed;
         bottom: 30px;
@@ -22,8 +21,6 @@
     .chat-btn:hover {
         transform: scale(1.1);
     }
-
-    /* Khung chat */
     .chat-box {
         position: fixed;
         bottom: 100px;
@@ -39,8 +36,6 @@
         overflow: hidden;
         border: 1px solid #ddd;
     }
-
-    /* Header chat */
     .chat-header {
         background: #0d6efd;
         color: white;
@@ -51,7 +46,6 @@
         font-weight: bold;
     }
 
-    /* Nội dung tin nhắn */
     .chat-body {
         flex: 1;
         padding: 15px;
@@ -61,8 +55,6 @@
         flex-direction: column;
         gap: 10px;
     }
-
-    /* Bong bóng tin nhắn */
     .message {
         max-width: 80%;
         padding: 10px 15px;
@@ -83,8 +75,6 @@
         align-self: flex-end;
         border-bottom-right-radius: 2px;
     }
-
-    /* Khu vực các nút chọn nhanh (Quick Replies) */
     .chat-options {
         display: flex;
         flex-wrap: wrap;
@@ -105,8 +95,6 @@
         background-color: #0d6efd;
         color: white;
     }
-
-    /* Khu vực nhập liệu */
     .chat-footer {
         padding: 10px;
         background: white;
@@ -154,7 +142,6 @@
 </div>
 
 <script>
-    // 1. Danh sách các câu hỏi thường gặp
     const quickQuestions = [
         "Giá sản phẩm?",
         "Chính sách bảo hành",
@@ -162,8 +149,6 @@
         "Phí giao hàng",
         "Tư vấn mua máy"
     ];
-
-    // Cờ để kiểm tra xem đã hiện nút lần đầu chưa
     let optionsShown = false;
 
     function toggleChat() {
@@ -171,8 +156,6 @@
         if (chatBox.style.display === 'none' || chatBox.style.display === '') {
             chatBox.style.display = 'flex';
             document.getElementById('chatInput').focus();
-            
-            // Nếu chưa hiện nút chọn thì hiện ra ngay sau câu chào
             if (!optionsShown) {
                 showQuickOptions();
                 optionsShown = true;
@@ -182,7 +165,6 @@
         }
     }
 
-    // Hàm hiển thị các nút chọn
     function showQuickOptions() {
         var chatBody = document.getElementById('chatBody');
         var optionsDiv = document.createElement('div');
@@ -192,7 +174,6 @@
             var btn = document.createElement('button');
             btn.className = 'option-btn';
             btn.innerText = question;
-            // Khi bấm nút -> Gọi hàm sendOption
             btn.onclick = function() { sendOption(question); }; 
             optionsDiv.appendChild(btn);
         });
@@ -200,19 +181,11 @@
         chatBody.appendChild(optionsDiv);
         chatBody.scrollTop = chatBody.scrollHeight;
     }
-
-    // Hàm xử lý khi bấm nút chọn nhanh
     function sendOption(text) {
-        // 1. Gửi tin nhắn như người dùng nhập
         addMessage(text, 'user-message');
-        
-        // 2. Bot trả lời
         setTimeout(function() {
             var botResponse = getBotResponse(text);
             addMessage(botResponse, 'bot-message');
-            
-            // (Tùy chọn) Hiện lại các nút chọn sau khi bot trả lời để khách chọn tiếp
-            // showQuickOptions(); 
         }, 500);
     }
 
@@ -246,7 +219,6 @@
         chatBody.scrollTop = chatBody.scrollHeight;
     }
 
-    // --- LOGIC TRẢ LỜI CỦA BOT ---
     function getBotResponse(input) {
         input = input.toLowerCase();
 

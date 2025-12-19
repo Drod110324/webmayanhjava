@@ -43,7 +43,6 @@
                                                     <c:when test="${!p.status || p.quantity <= 0}">
                                                         <button class="btn btn-secondary shadow-0 w-100" disabled>Hết hàng</button>
                                                     </c:when>
-                                                    <%-- Ngược lại: Còn hàng --%>
                                                     <c:otherwise>
                                                         <c:choose>
                                                             <c:when test="${user==null}">
@@ -100,11 +99,9 @@
 
                                                     <div class="card-footer product-card-footer d-flex justify-content-center align-items-end pt-3 px-0 pb-0 mt-auto bg-white border-0">
                                                         <c:choose>
-                                                            <%-- Nếu sản phẩm ngừng bán hoặc hết số lượng -> Hiện nút Hết hàng (Disable) --%>
                                                             <c:when test="${!p.status || p.quantity <= 0}">
                                                                 <button class="btn btn-secondary shadow-0 w-100" disabled>Hết hàng</button>
                                                             </c:when>
-                                                            <%-- Ngược lại: Còn hàng --%>
                                                             <c:otherwise>
                                                                 <c:choose>
                                                                     <c:when test="${user==null}">

@@ -23,7 +23,7 @@ public class CartServlet extends HttpServlet {
     @Override
     protected void doGet(HttpServletRequest request, HttpServletResponse response)
             throws ServletException, IOException {
-        
+        request.setAttribute("title", "Giỏ hàng");
         String action = request.getParameter("action");
         
         if ("add".equals(action)) {

@@ -20,7 +20,7 @@ import model.User;
  * @author Drod2
  */
 // SỬA QUAN TRỌNG: Thêm cả /user và /users để tương thích
-@WebServlet(name = "UserServlet", urlPatterns = {"/user", "/users"})
+@WebServlet(name = "UserServlet", urlPatterns = {"/user"})
 public class UserServlet extends HttpServlet {
 
     @Override

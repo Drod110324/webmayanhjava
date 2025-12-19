@@ -36,16 +36,12 @@ public class RegisterServlet extends HttpServlet {
         
         request.setCharacterEncoding("UTF-8");
         HttpSession session = request.getSession();
-        
-        // 1. Xóa các thông báo lỗi cũ
-        session.removeAttribute("err_name"); // Thêm xóa lỗi tên
+        session.removeAttribute("err_name");
         session.removeAttribute("err_email");
         session.removeAttribute("err_phone");
         session.removeAttribute("err_repassword");
         session.removeAttribute("err_password");
         session.removeAttribute("exist_user");
-        
-        // 2. Lấy dữ liệu từ form (File JSP đã sửa name="name" và name="phone")
         String name = request.getParameter("name");
         String email = request.getParameter("email");
         String phone = request.getParameter("phone");
@@ -98,19 +94,12 @@ public class RegisterServlet extends HttpServlet {
             response.sendRedirect("register");
             return;
         }
-        
-        // 4. Kiểm tra tồn tại và Thêm vào DB
-        // Sử dụng Database class hoặc new UserImpl()
-        // Giả sử bạn dùng Database.getUserDao() như code cũ
-        
-        // Check Email
+
         if(Database.getUserDao().findUser(email) != null){
             session.setAttribute("exist_user", "Email này đã được sử dụng!");
             response.sendRedirect("register");
             return;
         }
-        
-        // Check Phone
         if(Database.getUserDao().findUser(phone) != null){
             session.setAttribute("exist_user", "Số điện thoại này đã được sử dụng!");
             response.sendRedirect("register");
@@ -118,14 +107,10 @@ public class RegisterServlet extends HttpServlet {
         }
         
         try {
-            // Insert
             Database.getUserDao().insertUser(name, email, phone, password);
-            
-            // Auto Login
             User user = Database.getUserDao().findUser(email);
             if(user != null){
                 session.setAttribute("user", user);
-                // Redirect về trang chủ sau khi thành công
                 response.sendRedirect("home");
             } else {
                 session.setAttribute("exist_user", "Đăng ký thất bại. Vui lòng thử lại.");

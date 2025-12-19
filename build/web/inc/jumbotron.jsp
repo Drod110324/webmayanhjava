@@ -2,7 +2,6 @@
 <%@page contentType="text/html; charset=UTF-8" pageEncoding="UTF-8"%>
 
 <style>
-    /* Hero carousel full width, fade effect đã dùng Bootstrap */
     #heroCarousel {
         max-height: 500px;
         overflow: hidden;
@@ -35,7 +34,6 @@
     }
 </style>
 
-<!-- Hero Carousel Slider -->
 <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel">
     <!-- Indicators -->
     <div class="carousel-indicators">
@@ -122,7 +120,6 @@
         </div>
     </div>
 
-    <!-- Navigation Controls -->
     <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
         <span class="carousel-control-prev-icon" aria-hidden="true"></span>
         <span class="visually-hidden">Previous</span>

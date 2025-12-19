@@ -77,11 +77,7 @@ public class LoginServlet extends HttpServlet {
 
         String emailphone = request.getParameter("emailphone");
         String password = request.getParameter("password");
-        
-        // Clear previous error
         request.getSession().removeAttribute("login_error");
-        
-        // Validate input
         if(emailphone == null || emailphone.trim().isEmpty() || 
            password == null || password.trim().isEmpty()){
             request.getSession().setAttribute("login_error", "Please enter email/phone and password!");

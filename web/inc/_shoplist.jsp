@@ -86,15 +86,11 @@
                                                 <c:when test="${!p.status || p.quantity <= 0}">
                                                      <button class="btn btn-secondary shadow-0 w-100" disabled>Hết hàng</button>
                                                 </c:when>
-
-                                                <%-- Trường hợp 2: Còn hàng --%>
                                                 <c:otherwise>
                                                     <c:choose>
-                                                        <%-- Chưa đăng nhập --%>
                                                         <c:when test="${user==null}">
                                                             <a href="<c:url value='/login'/>" class="btn btn-primary shadow-0 w-100"><i class="fas fa-cart-plus me-1"></i>Thêm vào giỏ hàng</a>
                                                         </c:when>
-                                                        <%-- Đã đăng nhập --%>
                                                         <c:otherwise>
                                                             <a href="cart?action=add&id=${p.id}" class="btn btn-primary shadow-0 w-100"><i class="fas fa-cart-plus me-1"></i>Thêm vào giỏ hàng</a>
                                                         </c:otherwise>
