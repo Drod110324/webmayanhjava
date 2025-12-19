@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project-private xmlns="http://www.netbeans.org/ns/project-private/1">
+    <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
+    <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
+        <group>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/admincategory.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/UserServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/UpdateServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/UpdateCategoryServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/adminproduct.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/nbproject/build-impl.xml</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/data/impl/ProductImpl.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/product.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/LogoutServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/LoginServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/RegisterServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/ProductServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/CategoryServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/_cart.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/navbar.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/assets/images/slide2.jpg</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/jumbotron.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/productProfile.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/ProductProfileServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/z.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/admin.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/AdminServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/body.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/productpro.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/cart.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/CartServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/_register.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/_shoplist.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/ShopListServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/shoplist.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/home.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/chatbox.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/footer.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/views/UserProfile.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/data/dao/ProductDao.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/data/dao/UserDao.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/data/impl/UserImpl.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/src/java/controller/UserProfileServlet.java</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/_profile.jsp</file>
+            <file>file:/D:/Data%20NetBeans/WebMayAnh/web/inc/_login.jsp</file>
+        </group>
+    </open-files>
+</project-private>

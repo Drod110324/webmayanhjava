@@ -1,0 +1,242 @@
+/* ... Giữ nguyên các phần reset body, container cũ ... */
+
+/* --- Top Bar --- */
+.top-bar {
+    background-color: #f8f9fa;
+    border-bottom: 1px solid #e9ecef;
+    padding: 8px 0;
+    font-size: 0.85rem;
+    color: #6c757d;
+}
+
+/* --- Navbar & Logo --- */
+.navbar {
+    padding: 0.5rem 0; /* Giảm padding trên dưới của navbar */
+}
+
+/* QUAN TRỌNG: Giới hạn chiều cao logo để vừa với Navbar */
+.logo-img {
+    height: 70px; /* Tăng logo to thêm 10px */
+    width: auto;
+    object-fit: contain;
+}
+
+/* Tinh chỉnh form tìm kiếm */
+.input-group .form-control {
+    border-right: 0;
+}
+.input-group .btn-primary {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+
+/* Tinh chỉnh phần User Login */
+.nav-link {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* ============================
+   Product cards (trang home)
+   ============================ */
+.featured-products {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}
+
+.featured-products h2 {
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.product-card {
+    border-radius: 14px;
+    border: 1px solid #e5e7eb;
+    overflow: hidden;
+    transition: transform 0.18s ease, box-shadow 0.18s ease, border-color 0.18s ease;
+}
+
+.product-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 14px 30px rgba(15, 23, 42, 0.18);
+    border-color: #cbd5f5;
+}
+
+.product-card-img {
+    padding: 0.75rem;
+    background: radial-gradient(circle at top, #f9fafb 0, #edf2ff 45%, #ffffff 100%);
+    object-fit: contain;
+}
+
+.product-card-body {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    min-height: 140px;
+}
+
+.product-card-title {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: #111827;
+    min-height: 2.4em;
+}
+
+.product-card-price {
+    color: #e11d48;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.product-card-footer .btn {
+    font-size: 0.9rem;
+}
+
+/* Badge số lượng và trạng thái sản phẩm */
+.product-card-body .badge {
+    font-size: 0.7rem;
+    padding: 0.35rem 0.5rem;
+    font-weight: 500;
+}
+
+.product-card-body .badge i {
+    font-size: 0.65rem;
+}
+
+/* Nút tìm kiếm lớn, dễ bấm */
+.btn-search-custom {
+    padding-inline: 1.25rem;
+    font-size: 0.95rem;
+}
+
+/* ============================
+   Cart page
+   ============================ */
+.cart-page {
+    background-color: #f5f5f7;
+}
+
+.cart-item-img {
+    max-width: 80px;
+}
+
+.cart-summary-card {
+    border-radius: 16px;
+}
+
+/* ============================
+   Dropdown menu (navbar)
+   ============================ */
+
+/* Khung dropdown chung */
+.dropdown-menu-custom {
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+    box-shadow: 0 10px 25px rgba(15, 23, 42, 0.15);
+    padding: 8px 0;
+    background-color: #ffffff;
+}
+
+/* Bỏ hẳn mũi tên phía trên dropdown */
+.dropdown-menu-custom::before,
+.dropdown-menu-end.dropdown-menu-custom::before {
+    content: none;
+}
+
+/* Item trong dropdown */
+.dropdown-item-custom {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 8px 14px;
+    font-size: 0.95rem;
+    color: #111827 !important;          /* chữ xám đậm */
+    font-weight: 500;
+    border-radius: 6px;
+    margin: 2px 8px;
+}
+
+.dropdown-item-custom i {
+    font-size: 0.9rem;
+    color: #6b7280;
+}
+
+.dropdown-item-custom:hover {
+    background-color: #f3f4f6;          /* xám nhạt khi hover */
+    color: #0f172a !important;
+}
+
+.dropdown-item-custom:hover i {
+    color: #0d6efd;
+}
+
+/* Item đang được chọn */
+.dropdown-item-custom.active,
+.dropdown-item-custom:active {
+    background: linear-gradient(90deg, #dbeafe, #eff6ff);
+    color: #0b5ed7 !important;
+    font-weight: 600;
+}
+
+/* Mục đặc biệt (ví dụ Đăng xuất) */
+.dropdown-item-danger {
+    color: #b91c1c !important;
+}
+
+.dropdown-item-danger:hover {
+    background-color: #fee2e2;
+    color: #991b1b !important;
+}
+
+/* ============================
+   Footer
+   ============================ */
+.site-footer {
+    background: #0b1120;
+    color: #e5e7eb;
+    padding-top: 2.5rem;
+    margin-top: 3rem;
+    border-top: 1px solid rgba(148, 163, 184, 0.25);
+}
+
+.site-footer a {
+    color: #e5e7eb;
+    text-decoration: none;
+    font-size: 0.95rem;
+}
+
+.site-footer a:hover {
+    color: #38bdf8;
+}
+
+.site-footer h5 {
+    font-size: 1rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #9ca3af;
+}
+
+.site-footer .footer-bottom {
+    border-top: 1px solid rgba(148, 163, 184, 0.25);
+    margin-top: 1.5rem;
+    padding-top: 1rem;
+    font-size: 0.85rem;
+    color: #9ca3af;
+}
+
+.footer-social a {
+    width: 32px;
+    height: 32px;
+    border-radius: 999px;
+    background: rgba(15, 23, 42, 0.8);
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 0.4rem;
+    font-size: 0.9rem;
+}
+
+.footer-social a:hover {
+    background: #1d4ed8;
+    color: #fff;
+}
