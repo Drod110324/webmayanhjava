@@ -13,14 +13,17 @@ import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
 import java.util.ArrayList;
+import java.util.List;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import model.Category;
 
 /**
  *
  * @author Drod2
  */
 public class CategoryImpl implements CategoryDao {
+    @Override
     public List<Category> findALL(){
         List<Category> listCategory = new ArrayList<>();
         Connection con = MySQLDriver.getConnection();
@@ -38,12 +41,56 @@ public class CategoryImpl implements CategoryDao {
         }
         return listCategory;
     }
-    public void insert(String name){}
-    public void delete(int id){}
-    public void update(int id, String name, String newName){}
-
     @Override
+    public void insert(String name){
+        Connection con = MySQLDriver.getConnection();
+        String sql = "INSERT INTO categories (name) VALUES (?)";
+        try {
+            PreparedStatement sttm = con.prepareStatement(sql);
+            sttm.setString(1, name);
+            sttm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(CategoryImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @Override
+    public void delete(int id){
+        Connection con = MySQLDriver.getConnection();
+        String sql = "DELETE FROM categories WHERE id = ?";
+        try {
+            PreparedStatement sttm = con.prepareStatement(sql);
+            sttm.setInt(1, id);
+            sttm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(CategoryImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+    
+    @Override
+    public void update(int id, String newName){
+        Connection con = MySQLDriver.getConnection();
+        String sql = "UPDATE categories SET name = ? WHERE id = ?";
+        try {
+            PreparedStatement sttm = con.prepareStatement(sql);
+            sttm.setString(1, newName);
+            sttm.setInt(2, id);
+            sttm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(CategoryImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
+    }
+
     public void update(String name, String newName) {
-        throw new UnsupportedOperationException("Not supported yet."); // Generated from nbfs://nbhost/SystemFileSystem/Templates/Classes/Code/GeneratedMethodBody
+        Connection con = MySQLDriver.getConnection();
+        String sql = "UPDATE categories SET name = ? WHERE name = ?";
+        try {
+            PreparedStatement sttm = con.prepareStatement(sql);
+            sttm.setString(1, newName);
+            sttm.setString(2, name);
+            sttm.executeUpdate();
+        } catch (SQLException ex) {
+            Logger.getLogger(CategoryImpl.class.getName()).log(Level.SEVERE, null, ex);
+        }
     }
 }

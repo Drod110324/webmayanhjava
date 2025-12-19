@@ -19,8 +19,8 @@ import model.User;
  *
  * @author Drod2
  */
-// SỬA QUAN TRỌNG: Thêm chữ 's' vào urlPatterns để khớp với link gọi
-@WebServlet(name = "UserServlet", urlPatterns = {"/user"})
+// SỬA QUAN TRỌNG: Thêm cả /user và /users để tương thích
+@WebServlet(name = "UserServlet", urlPatterns = {"/user", "/users"})
 public class UserServlet extends HttpServlet {
 
     @Override
@@ -35,8 +35,8 @@ public class UserServlet extends HttpServlet {
             try {
                 int id = Integer.parseInt(idStr);
                 userDao.delete(id);
-                // Redirect về trang danh sách (users)
-                response.sendRedirect("users");
+                // Redirect về trang danh sách
+                response.sendRedirect("user");
                 return;
             } catch (Exception e) {
                 e.printStackTrace();

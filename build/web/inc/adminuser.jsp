@@ -23,8 +23,8 @@
                     <td>${u.email}</td>
                     <td>${u.phone}</td>
                     <td>
-                        <span class="badge ${u.role == 'ADMIN' ? 'bg-danger' : 'bg-success'}">
-                            ${u.role}
+                        <span class="badge ${u.role == 'ADMIN' || u.role == 'admin' ? 'bg-danger' : 'bg-success'}">
+                            ${u.role == 'user' ? 'USER' : (u.role == 'admin' ? 'ADMIN' : u.role)}
                         </span>
                     </td>
                     <td>
@@ -74,7 +74,7 @@
                     <div class="mb-3">
                         <label class="form-label">Vai trò:</label>
                         <select name="role" id="editRole" class="form-select">
-                            <option value="USER">USER (Người dùng)</option>
+                            <option value="user">USER (Người dùng)</option>
                             <option value="ADMIN">ADMIN (Quản trị)</option>
                         </select>
                     </div>

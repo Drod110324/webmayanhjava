@@ -39,12 +39,9 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
                 </div>
                 <div class="modal-body">
-                    <label class="form-label">ID</label>
-                    <input type="number" name="id" id="addCategoryId" class="form-control" placeholder="Nhập tên danh mục..." required>
-                </div>
-                <div class="modal-body">
-                    <label class="form-label">Tên danh mục</label>
+                    <label class="form-label">Tên danh mục <span class="text-danger">*</span></label>
                     <input type="text" name="name" id="addCategoryName" class="form-control" placeholder="Nhập tên danh mục..." required>
+                    <small class="text-muted">ID sẽ được tự động tạo</small>
                 </div>
                 <div class="modal-footer">
                     <button type="submit" class="btn btn-primary">Lưu</button>
@@ -80,7 +77,6 @@
 
 <script>
     function openAddCategoryModal() {
-        document.getElementById('addCategoryId').value = '';
         document.getElementById('addCategoryName').value = '';
         var myModal = new bootstrap.Modal(document.getElementById('addCategoryModal'));
         myModal.show();

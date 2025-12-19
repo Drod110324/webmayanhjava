@@ -62,6 +62,7 @@
                                         <li><a class="dropdown-item dropdown-item-custom" href="product"><i class="fas fa-boxes"></i> Quản lý sản phẩm</a></li>
                                         <li><a class="dropdown-item dropdown-item-custom" href="category"><i class="fas fa-tags"></i> Quản lý danh mục</a></li>
                                         <li><a class="dropdown-item dropdown-item-custom" href="user"><i class="fas fa-users-cog"></i> Quản lý người dùng</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom" href="statistics"><i class="fas fa-chart-line"></i> Thống kê báo cáo</a></li>
                                     </c:if>
                                     <li><hr class="dropdown-divider"></li>
                                     <li><a class="dropdown-item dropdown-item-custom dropdown-item-danger fw-semibold" href="<c:url value='/logout'/>"><i class="fas fa-sign-out-alt"></i> Đăng xuất</a></li>

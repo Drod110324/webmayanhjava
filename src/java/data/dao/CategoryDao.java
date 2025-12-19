@@ -16,6 +16,5 @@ public interface CategoryDao {
     public void insert(String name);
     public void delete(int id);
     public void update(String name, String newName);
-
-    
+    public void update(int id, String newName);
 }
