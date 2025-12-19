@@ -7,9 +7,9 @@
             <div class="col-md-4">
                 <h5 class="mb-3">Camera Store</h5>
                 <p class="mb-2">Chuyên máy ảnh, ống kính và phụ kiện chính hãng cho nhiếp ảnh gia từ mới bắt đầu đến chuyên nghiệp.</p>
-                <p class="mb-0"><i class="fas fa-location-dot me-2"></i>123 Đường Công Nghệ, Thành phố Mới</p>
+                <p class="mb-0"><i class="fas fa-location-dot me-2"></i>Thành Phố Huế</p>
                 <p class="mb-0"><i class="fas fa-phone me-2"></i>0123 456 789</p>
-                <p class="mb-0"><i class="fas fa-envelope me-2"></i>support@camerastore.vn</p>
+                <p class="mb-0"><i class="fas fa-envelope me-2"></i>22T1020796@husc.edu.vn</p>
             </div>
 
             <div class="col-md-4">

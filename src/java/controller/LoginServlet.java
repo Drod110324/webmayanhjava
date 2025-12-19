@@ -80,7 +80,7 @@ public class LoginServlet extends HttpServlet {
         request.getSession().removeAttribute("login_error");
         if(emailphone == null || emailphone.trim().isEmpty() || 
            password == null || password.trim().isEmpty()){
-            request.getSession().setAttribute("login_error", "Please enter email/phone and password!");
+            request.getSession().setAttribute("login_error", "Hãy điền tài khoản hoặc mật khẩu!");
             response.sendRedirect("login");
             return;
         }
@@ -89,7 +89,7 @@ public class LoginServlet extends HttpServlet {
             User user = Database.getUserDao().findUser(emailphone.trim(), password);
 
             if (user == null) {
-                request.getSession().setAttribute("login_error", "Email/Phone or Password is incorrect!");
+                request.getSession().setAttribute("login_error", "Email hoặc mật khẩu sai!");
                 response.sendRedirect("login");
             } else {
                 request.getSession().removeAttribute("login_error");

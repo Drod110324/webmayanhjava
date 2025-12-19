@@ -35,15 +35,12 @@ public class UserServlet extends HttpServlet {
             try {
                 int id = Integer.parseInt(idStr);
                 userDao.delete(id);
-                // Redirect về trang danh sách
                 response.sendRedirect("user");
                 return;
             } catch (Exception e) {
                 e.printStackTrace();
             }
         }
-
-        // 2. Load danh sách hiển thị
         List<User> listUsers = userDao.findAll();
         request.setAttribute("listUsers", listUsers);
         request.getRequestDispatcher("views/user.jsp").forward(request, response);

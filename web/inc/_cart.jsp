@@ -215,20 +215,17 @@
                                 </div>
                             </div>
                         </div>
-
-                        <!-- Thông tin chuyển khoản (hiện khi chọn) -->
                         <div id="bankInfo" class="mt-3 p-3 bg-light rounded" style="display: none;">
                             <p class="mb-2"><strong>Thông tin chuyển khoản:</strong></p>
                             <p class="mb-1">Số tài khoản: <strong>1234567890</strong></p>
                             <p class="mb-1">Ngân hàng: <strong>Vietcombank</strong></p>
-                            <p class="mb-0">Chủ tài khoản: <strong>Camera Store</strong></p>
+                            <p class="mb-0">Chủ tài khoản: <strong>Nguyễn Hữu Việt</strong></p>
                             <p class="mb-0 text-muted small">Nội dung chuyển khoản: Mã đơn hàng + Số điện thoại</p>
                         </div>
                     </div>
 
                     <hr>
 
-                    <!-- Tóm tắt đơn hàng trong modal -->
                     <div class="mb-3">
                         <h6 class="mb-3"><i class="fas fa-receipt me-2 text-primary"></i>Tóm tắt đơn hàng</h6>
                         <div class="bg-light p-3 rounded">
@@ -263,7 +260,6 @@
 </div>
 
 <script>
-    // Hiện/ẩn thông tin chuyển khoản khi chọn phương thức thanh toán
     document.querySelectorAll('input[name="paymentMethod"]').forEach(radio => {
         radio.addEventListener('change', function() {
             const bankInfo = document.getElementById('bankInfo');
@@ -275,7 +271,6 @@
         });
     });
 
-    // Validate form trước khi submit
     document.getElementById('checkoutForm').addEventListener('submit', function(e) {
         const name = document.getElementById('customerName').value.trim();
         const phone = document.getElementById('customerPhone').value.trim();
@@ -288,7 +283,6 @@
             return false;
         }
 
-        // Validate email
         const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
         if (!emailRegex.test(email)) {
             e.preventDefault();
@@ -296,7 +290,6 @@
             return false;
         }
 
-        // Validate phone (ít nhất 10 số)
         const phoneRegex = /^[0-9]{10,11}$/;
         if (!phoneRegex.test(phone.replace(/\s+/g, ''))) {
             e.preventDefault();
