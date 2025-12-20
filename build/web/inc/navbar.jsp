@@ -59,9 +59,9 @@
                                     <li><a class="dropdown-item dropdown-item-custom" href="profile"><i class="fas fa-user-circle"></i> Thông tin</a></li>
                                     <c:if test="${user != null && (user.role == 'admin' || user.role == 'ADMIN')}">
                                         <li><hr class="dropdown-divider"></li>
-                                        <li><a class="dropdown-item dropdown-item-custom" href="product"><i class="fas fa-boxes"></i> Quản lý sản phẩm</a></li>
-                                        <li><a class="dropdown-item dropdown-item-custom" href="category"><i class="fas fa-tags"></i> Quản lý danh mục</a></li>
-                                        <li><a class="dropdown-item dropdown-item-custom" href="user"><i class="fas fa-users-cog"></i> Quản lý người dùng</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom" href="adminproduct"><i class="fas fa-boxes"></i> Quản lý sản phẩm</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom" href="admincategory"><i class="fas fa-tags"></i> Quản lý danh mục</a></li>
+                                        <li><a class="dropdown-item dropdown-item-custom" href="adminuser"><i class="fas fa-users-cog"></i> Quản lý người dùng</a></li>
                                         <li><a class="dropdown-item dropdown-item-custom" href="statistics"><i class="fas fa-chart-line"></i> Thống kê báo cáo</a></li>
                                     </c:if>
                                     <li><hr class="dropdown-divider"></li>

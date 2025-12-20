@@ -24,6 +24,25 @@
                     </div>
                 </div>
 
+                <!-- Thông báo thành công/ lỗi -->
+                <c:if test="${not empty sessionScope.checkout_success}">
+                    <div class="alert alert-success alert-dismissible fade show" role="alert">
+                        <i class="fas fa-check-circle me-2"></i>
+                        ${sessionScope.checkout_success}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                    <c:remove var="checkout_success" scope="session"/>
+                </c:if>
+                
+                <c:if test="${not empty sessionScope.checkout_error}">
+                    <div class="alert alert-danger alert-dismissible fade show" role="alert">
+                        <i class="fas fa-exclamation-triangle me-2"></i>
+                        ${sessionScope.checkout_error}
+                        <button type="button" class="btn-close" data-bs-dismiss="alert"></button>
+                    </div>
+                    <c:remove var="checkout_error" scope="session"/>
+                </c:if>
+
                 <c:if test="${empty cart}">
                     <div class="card border-0 shadow-sm">
                         <div class="card-body text-center py-5">
@@ -33,7 +52,7 @@
                             <a href="home" class="btn btn-primary">
                                 <i class="fas fa-arrow-left me-1"></i> Về trang sản phẩm
                             </a>
-                                                </div>
+                        </div>
                     </div>
                 </c:if>
 
@@ -113,12 +132,19 @@
                                                             </span>
                                                         </div>
 
-                        <button type="button" class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#checkoutModal">
-                            <div class="d-flex justify-content-between align-items-center">
-                                <span>Thanh toán</span>
-                                <span class="fw-semibold">$${total * 1.1}</span>
-                                                    </div>
-                        </button>
+                        <c:if test="${not empty cart}">
+                            <button type="button" class="btn btn-primary w-100 mb-2" data-bs-toggle="modal" data-bs-target="#checkoutModal">
+                                <div class="d-flex justify-content-between align-items-center">
+                                    <span><i class="fas fa-shopping-bag me-1"></i>Thanh toán</span>
+                                    <span class="fw-semibold">$<fmt:formatNumber type="number" maxFractionDigits="2" value="${total * 1.1}" /></span>
+                                </div>
+                            </button>
+                        </c:if>
+                        <c:if test="${empty cart}">
+                            <button type="button" class="btn btn-secondary w-100 mb-2" disabled>
+                                <i class="fas fa-shopping-bag me-1"></i>Thanh toán
+                            </button>
+                        </c:if>
 
                         <p class="text-muted small mb-0">
                             Bằng việc tiếp tục, bạn đồng ý với các điều khoản và chính sách mua hàng của chúng tôi.

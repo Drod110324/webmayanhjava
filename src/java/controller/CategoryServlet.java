@@ -19,7 +19,7 @@ import model.Category;
  *
  * @author Drod1103
  */
-@WebServlet(name = "CategoryServlet", urlPatterns = {"/category"})
+@WebServlet(name = "CategoryServlet", urlPatterns = {"/admincategory"})
 public class CategoryServlet extends HttpServlet {
 
     @Override

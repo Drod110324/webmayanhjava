@@ -20,7 +20,7 @@ import model.Product;
  *
  * @author Drod1103
  */
-@WebServlet(name = "ProductServlet", urlPatterns = {"/product"})
+@WebServlet(name = "ProductServlet", urlPatterns = {"/adminproduct"})
 public class ProductServlet extends HttpServlet {
 
     @Override
@@ -83,7 +83,7 @@ public class ProductServlet extends HttpServlet {
         }
         Database.getProductDao().add(name, price, quantity, image, idCategory);
         
-        response.sendRedirect(request.getContextPath() + "/product");
+        response.sendRedirect(request.getContextPath() + "/adminproduct");
     }
 
     @Override
